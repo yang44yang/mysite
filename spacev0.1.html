@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网页 - 评论区</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>你可以在下方留下评论。</p>
+    
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = 'https://contractv.notion.site';  // 替换为你的 Notion 站点 URL
+            this.page.identifier = 'contractv-notion-home'; // 为这个页面创建一个唯一的标识符
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://spacev.disqus.com/embed.js';  // 确保短名称正确
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>请启用 JavaScript 以查看 <a href="https://disqus.com/?ref_noscript">由 Disqus 提供支持的评论。</a></noscript>
+</body>
+</html>
